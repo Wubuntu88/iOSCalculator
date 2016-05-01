@@ -13,6 +13,7 @@
 		BE29499A1B76B42700531688 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2949991B76B42700531688 /* Images.xcassets */; };
 		BE29499D1B76B42700531688 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE29499B1B76B42700531688 /* LaunchScreen.xib */; };
 		BE2949A91B76B42800531688 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2949A81B76B42800531688 /* CalculatorTests.swift */; };
+		BE2949B31B7D41E300531688 /* CalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2949B21B7D41E300531688 /* CalcModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BE2949A21B76B42800531688 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2949A71B76B42800531688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE2949A81B76B42800531688 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
+		BE2949B21B7D41E300531688 /* CalcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,9 @@
 		BE29498F1B76B42700531688 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				BE2949921B76B42700531688 /* AppDelegate.swift */,
 				BE2949941B76B42700531688 /* ViewController.swift */,
 				BE2949961B76B42700531688 /* Main.storyboard */,
-				BE2949991B76B42700531688 /* Images.xcassets */,
-				BE29499B1B76B42700531688 /* LaunchScreen.xib */,
+				BE2949B21B7D41E300531688 /* CalcModel.swift */,
 				BE2949901B76B42700531688 /* Supporting Files */,
 			);
 			path = Calculator;
@@ -90,6 +90,9 @@
 		BE2949901B76B42700531688 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE2949991B76B42700531688 /* Images.xcassets */,
+				BE29499B1B76B42700531688 /* LaunchScreen.xib */,
+				BE2949921B76B42700531688 /* AppDelegate.swift */,
 				BE2949911B76B42700531688 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -156,7 +159,9 @@
 		BE2949851B76B42700531688 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "William Edward Gillespie";
 				TargetAttributes = {
 					BE29498C1B76B42700531688 = {
@@ -212,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2949B31B7D41E300531688 /* CalcModel.swift in Sources */,
 				BE2949951B76B42700531688 /* ViewController.swift in Sources */,
 				BE2949931B76B42700531688 /* AppDelegate.swift in Sources */,
 			);
@@ -276,6 +282,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -344,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.EasternMichiganUniversity.WilliamGillespie.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.EasternMichiganUniversity.WilliamGillespie.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -372,6 +381,7 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.EasternMichiganUniversity.WilliamGillespie.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
@@ -387,6 +397,7 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.EasternMichiganUniversity.WilliamGillespie.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
@@ -411,6 +422,7 @@
 				BE2949AE1B76B42800531688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE2949AF1B76B42800531688 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +431,7 @@
 				BE2949B11B76B42800531688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
